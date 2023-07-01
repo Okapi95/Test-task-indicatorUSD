@@ -14,12 +14,9 @@ function ApplicationContentContainer() {
     console.log("ширина серой" + widthStaticIndicator);
     const interimWidthMoovingIndicator = widthStaticIndicator - 9;
     console.log("ширина голубой" + interimWidthMoovingIndicator);
-    setWidthMoovingIndicator(
-      (widthMoovingIndicator) =>
-        widthMoovingIndicator + interimWidthMoovingIndicator
-    );
+    setWidthMoovingIndicator(interimWidthMoovingIndicator);
   }, []);
-
+  console.log("ширина голубой вне эффекта" + widthMoovingIndicator);
   return (
     <ApplicationContent
       currentValuePx={currentValuePx}

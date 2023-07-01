@@ -13,6 +13,7 @@ function ApplicationContent({
   setCurrentValue,
   widthStaticIndicatorRef,
 }) {
+  console.log("ldbkdbldghjldkjhdihjdhgjdhgdi" + widthMoovingIndicator); // здесь 141 ширина
   return (
     <section className={classes.applicationContent}>
       <h1 className={classes.applicationContent__header}>
@@ -43,7 +44,7 @@ function ApplicationContent({
               {currentValuePx < widthMoovingIndicator
                 ? `You need $${(15 - currentValue).toFixed(
                     currentValue <= targetValue ? 0 : 1
-                  )} more to reach your target.`
+                  )} more to reach your target. ${widthMoovingIndicator}`
                 : ""}
             </div>
           </div>

@@ -16,6 +16,7 @@ function TargetAndIndicatorContainer({
   const setIntervalRefTwo = useRef();
 
   if (currentValuePx >= targetValuePx && currentValuePx !== 0) {
+    console.log("выполнилось ли вообще условие7 - да");
     console.log(currentValuePx);
     console.log(setIntervalRef);
     clearInterval(setIntervalRef.current);
@@ -34,14 +35,15 @@ function TargetAndIndicatorContainer({
     console.log("bketjlgijohldfkdgner");
     clearInterval(setIntervalRefTwo.current);
   }
+  console.log("это бесячая ширина...." + widthMoovingIndicator); //здесь она равна 141
   useEffect(() => {
     console.log("useEffect");
-    console.log("это бесячая ширина...." + widthMoovingIndicator);
-    fetch("https://alex.devel.softservice.org/testapi/")
+    console.log("это бесячая ширина в юзэффекте...." + widthMoovingIndicator); //здесь она равна 0
+    fetch("https://meetroom.speakatalka.com/api/test")
       .then((response) => response.json())
       .then((response) => {
         setTargetValuePx(
-          () => (response.balance_usd * widthMoovingIndicator) / 15
+          () => (response.balance_usd * widthMoovingIndicator) / 15 //здесь она равна 0
         );
         setTargetValue(() => response.balance_usd);
         console.log(setIntervalRef.current);
@@ -49,10 +51,10 @@ function TargetAndIndicatorContainer({
           console.log("go int");
           setIntervalRef.current = setInterval(() => {
             console.log("go int 2");
-            setCurrentValuePx((value) => value + widthMoovingIndicator / 15);
+            console.log("go int 2==" + widthMoovingIndicator);
+            setCurrentValuePx((value) => value + widthMoovingIndicator / 15); //здесь она равна 0
             setCurrentValue((value) => value + 1);
-            console.log(currentValuePx);
-          }, 2000);
+          }, 1000);
         }
       })
       .catch((error) =>
