@@ -1,0 +1,6 @@
+.app {
+  display: flex;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}

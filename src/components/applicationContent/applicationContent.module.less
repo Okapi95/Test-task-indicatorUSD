@@ -1,0 +1,63 @@
+@import url("../../totalVariables.module.less");
+
+.applicationContent {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 365px;
+  border-radius: 10px;
+  border: 1px solid black;
+
+  .applicationContent__header {
+    display: block;
+    background-color: #4a4949;
+    color: @colorOne;
+    padding: 5px 15px;
+    font-size: 16px;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .applicationContent__backgroundBlock {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
+
+    .applicationContent__targetIndicatorShell {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      background-color: @colorOne;
+      border: 1px solid #d5d3d3;
+      border-radius: 10px;
+      padding: 15px 45px;
+      justify-content: center;
+      align-items: center;
+
+      .applicationContent__targetIndicatorBlock {
+        display: flex;
+        width: fit-content;
+        gap: 15px;
+        align-items: center;
+
+        .applicationContent__reached {
+          color: @colorThree;
+          font-weight: bold;
+        }
+      }
+
+      .applicationContent__noticeBlock {
+        display: flex;
+        gap: 5px;
+        width: fit-content;
+        color: @colorTwo;
+
+        .applicationContent__notice {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+  }
+}

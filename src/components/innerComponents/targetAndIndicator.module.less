@@ -1,0 +1,72 @@
+@import url("../../totalVariables.module.less");
+
+.targetAndIndicator {
+   display: flex;
+   align-items: center;
+
+   .targetAndIndicator__staticIndicator {
+      position: relative;
+      height: @heightStaticIndicator;
+      width: @widthStaticIndicator;
+      background-color: #cecece;
+
+      .targetAndIndicator__moovingIndicator {
+         position: absolute;
+         top: 18%;
+         left: 3%;
+         height: @heightMoovingIndicator;
+         background-color: #0489d1;
+      }
+
+      .targetAndIndicator__targetCursor {
+         position: absolute;
+         top: 120%;
+         // left: 3%;
+         display: grid;
+         justify-items: center;
+
+         .targetAndIndicator__targetCursorTriangle {
+            width: 0;
+            height: 0;
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            border-bottom: 8px solid @colorThree;
+
+         }
+
+         .targetAndIndicator__targetCursorValue {
+            color: @colorThree;
+            font-weight: bold;
+         }
+      }
+   }
+
+   .targetAndIndicator__targetBox {
+      border-radius: 3px;
+      color: @colorOne;
+      border: 1px solid #dcd9d9;
+
+      .targetAndIndicator__smallPartTargetBox {
+         padding: 2px 10px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         background-color: @backgroundColorTargetBox;
+         border-radius: 3px 3px 0 0;
+         border-bottom: 1px solid;
+         border-image: linear-gradient(to right, @backgroundColorTargetBox, #838184, @backgroundColorTargetBox) 50% 0%;
+      }
+
+      .targetAndIndicator__largePartTargetBox {
+         padding: 2px 10px;
+         font-size: 22px;
+         background: linear-gradient(to top, @colorTwo, @backgroundColorTargetBox);
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         border-radius: 0 0 3px 3px;
+         border-top: 1px solid;
+         border-image: linear-gradient(to right, @backgroundColorTargetBox, #9b9797, @backgroundColorTargetBox) 50% 0%;
+      }
+   }
+}
