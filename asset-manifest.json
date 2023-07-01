@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/react-gh-pages/static/css/main.3684c724.css",
-    "main.js": "/react-gh-pages/static/js/main.7210c88b.js",
-    "static/js/787.c6d9139b.chunk.js": "/react-gh-pages/static/js/787.c6d9139b.chunk.js",
-    "static/media/iconInfo.svg": "/react-gh-pages/static/media/iconInfo.84fc7655c172459e9ada15969bb5c1c2.svg",
-    "index.html": "/react-gh-pages/index.html",
-    "main.3684c724.css.map": "/react-gh-pages/static/css/main.3684c724.css.map",
-    "main.7210c88b.js.map": "/react-gh-pages/static/js/main.7210c88b.js.map",
-    "787.c6d9139b.chunk.js.map": "/react-gh-pages/static/js/787.c6d9139b.chunk.js.map"
+    "main.css": "/Test-task-indicatorUSD/static/css/main.3684c724.css",
+    "main.js": "/Test-task-indicatorUSD/static/js/main.4f97d49f.js",
+    "static/js/787.c6d9139b.chunk.js": "/Test-task-indicatorUSD/static/js/787.c6d9139b.chunk.js",
+    "static/media/iconInfo.svg": "/Test-task-indicatorUSD/static/media/iconInfo.84fc7655c172459e9ada15969bb5c1c2.svg",
+    "index.html": "/Test-task-indicatorUSD/index.html",
+    "main.3684c724.css.map": "/Test-task-indicatorUSD/static/css/main.3684c724.css.map",
+    "main.4f97d49f.js.map": "/Test-task-indicatorUSD/static/js/main.4f97d49f.js.map",
+    "787.c6d9139b.chunk.js.map": "/Test-task-indicatorUSD/static/js/787.c6d9139b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3684c724.css",
-    "static/js/main.7210c88b.js"
+    "static/js/main.4f97d49f.js"
   ]
 }
