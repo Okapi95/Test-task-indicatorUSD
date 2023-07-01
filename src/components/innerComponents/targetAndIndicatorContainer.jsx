@@ -58,11 +58,6 @@ function TargetAndIndicatorContainer({
       .catch((error) =>
         alert(`Запрос выполнился с ошибкой, проблемы с сервером :(`)
       );
-
-    // return () => {
-    //   clearInterval(setIntervalRef.current);
-    //   clearInterval(setIntervalRefTwo.current);
-    // };
   }, []);
 
   return (
