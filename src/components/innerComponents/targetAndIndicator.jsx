@@ -1,11 +1,11 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import classes from "./targetAndIndicator.module.less";
 
 function TargetAndIndicator({
   currentValuePx,
-  widthMoovingIndicator,
   currentValue,
   widthStaticIndicatorRef,
+  maxBalance,
 }) {
   return (
     <div className={classes.targetAndIndicator}>
@@ -17,16 +17,11 @@ function TargetAndIndicator({
           className={classes.targetAndIndicator__moovingIndicator}
           style={{ width: currentValuePx }}
         ></div>
-        {currentValuePx < widthMoovingIndicator && (
+        {currentValue < maxBalance && (
           <div
             className={classes.targetAndIndicator__targetCursor}
             style={{
-              left:
-                currentValue < 10
-                  ? currentValuePx - 5
-                  : currentValue >= 10 && currentValue <= 14
-                  ? currentValuePx - 10
-                  : currentValuePx - 15,
+              left: currentValuePx - 21,
             }}
           >
             <div
@@ -43,8 +38,7 @@ function TargetAndIndicator({
         <div
           className={classes.targetAndIndicator__smallPartTargetBox}
           style={{
-            backgroundColor:
-              currentValuePx >= widthMoovingIndicator ? "#00A910" : "",
+            backgroundColor: currentValue >= maxBalance ? "#00A910" : "",
           }}
         >
           Target
@@ -52,11 +46,10 @@ function TargetAndIndicator({
         <div
           className={classes.targetAndIndicator__largePartTargetBox}
           style={{
-            background:
-              currentValuePx >= widthMoovingIndicator ? "#00A910" : "",
+            background: currentValue >= maxBalance ? "#00A910" : "",
           }}
         >
-          15$
+          {maxBalance}$
         </div>
       </div>
     </div>

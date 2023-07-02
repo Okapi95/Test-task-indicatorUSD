@@ -6,14 +6,13 @@ import TargetAndIndicatorContainer from "../innerComponents/targetAndIndicatorCo
 function ApplicationContent({
   currentValuePx,
   setCurrentValuePx,
-  widthMoovingIndicator,
   targetValue,
   setTargetValue,
   currentValue,
   setCurrentValue,
   widthStaticIndicatorRef,
 }) {
-  console.log("ldbkdbldghjldkjhdihjdhgjdhgdi" + widthMoovingIndicator); // здесь 141 ширина
+  const maxBalance = 15;
   return (
     <section className={classes.applicationContent}>
       <h1 className={classes.applicationContent__header}>
@@ -26,12 +25,12 @@ function ApplicationContent({
             <TargetAndIndicatorContainer
               currentValuePx={currentValuePx}
               setCurrentValuePx={setCurrentValuePx}
-              widthMoovingIndicator={widthMoovingIndicator}
               targetValue={targetValue}
               setTargetValue={setTargetValue}
               setCurrentValue={setCurrentValue}
               currentValue={currentValue}
               widthStaticIndicatorRef={widthStaticIndicatorRef}
+              maxBalance={maxBalance}
             />
           </div>
           <div className={classes.applicationContent__noticeBlock}>
@@ -39,12 +38,16 @@ function ApplicationContent({
               src={iconInfoSvg}
               alt="iconInfo"
               style={{ width: "25px", height: "25px" }}
-            />{" "}
+            />
             <div className={classes.applicationContent__notice}>
-              {currentValuePx < widthMoovingIndicator
-                ? `You need $${(15 - currentValue).toFixed(
-                    currentValue <= targetValue ? 0 : 1
-                  )} more to reach your target. ${widthMoovingIndicator}`
+              {currentValue < maxBalance
+                ? `You need $${(maxBalance - currentValue).toFixed(
+                    currentValue <= targetValue
+                      ? 0
+                      : !(currentValue % 1 === 0)
+                      ? 1
+                      : 0
+                  )} more to reach your target.`
                 : ""}
             </div>
           </div>
