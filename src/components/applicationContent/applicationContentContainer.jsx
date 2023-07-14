@@ -8,17 +8,17 @@ function ApplicationContentContainer() {
 
   const widthStaticIndicatorRef = useRef(null);
 
-  return (
-    <ApplicationContent
-      currentValuePx={currentValuePx}
-      setCurrentValuePx={setCurrentValuePx}
-      widthStaticIndicatorRef={widthStaticIndicatorRef}
-      targetValue={targetValue}
-      setTargetValue={setTargetValue}
-      currentValue={currentValue}
-      setCurrentValue={setCurrentValue}
-    />
-  );
+  const props = {
+    currentValuePx,
+    setCurrentValuePx,
+    widthStaticIndicatorRef,
+    targetValue,
+    setTargetValue,
+    currentValue,
+    setCurrentValue,
+  };
+
+  return <ApplicationContent {...props} />;
 }
 
 export default ApplicationContentContainer;
